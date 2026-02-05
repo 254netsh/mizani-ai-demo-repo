@@ -1,0 +1,21 @@
+<div class="dashboard">
+    <h1>Welcome to Your Dashboard</h1>
+    <p>Here you can manage your settings and view your activity.</p>
+
+    <div class="stats">
+        <h2>Your Statistics</h2>
+        <ul>
+            <li>Total Posts: {{ $totalPosts }}</li>
+            <li>Total Comments: {{ $totalComments }}</li>
+            <li>New Followers: {{ $newFollowers }}</li>
+        </ul>
+    </div>
+
+    <div class="recent-activity">
+        <h2>Recent Activity</h2>
+        <ul>
+            @foreach($recentActivities as $activity)
+                <li>{{ $activity }}</li>
+            @endforeach
+        </ul>
+    </div>
